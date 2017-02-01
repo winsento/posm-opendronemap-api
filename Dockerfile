@@ -27,6 +27,9 @@ RUN pip install -r requirements.txt && \
 
 COPY . /app
 
+# Add DJI Phantom 4 sensor
+RUN sed -i '2i\    "DJI FC330": 6.25,' /code/SuperBuild/src/opensfm/opensfm/data/sensor_data.json
+
 # override this accordingly; should be 2-4x $(nproc)
 ENV WEB_CONCURRENCY 4
 EXPOSE 8000
