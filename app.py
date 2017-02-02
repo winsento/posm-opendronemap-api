@@ -88,6 +88,8 @@ def process_project(self, id):
     command = [
         'python',
         '/code/run.py',
+        '--cmvs-maxImages',
+        '100', # Fix option-0000 returned with code 35072 https://github.com/OpenDroneMap/OpenDroneMap/wiki/FAQ
         '--project-path',
         '.', # this will be executed from the project directory
     ]
