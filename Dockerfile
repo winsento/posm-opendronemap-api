@@ -1,4 +1,4 @@
-FROM winsent/opendronemap:develop
+FROM winsent/opendronemap:0.2
 MAINTAINER Seth Fitzsimmons <seth@mojodna.net>
 
 ENV DEBIAN_FRONTEND noninteractive
